@@ -79,11 +79,10 @@
 [push]
 	default = current
 [user]
-	name = Trevor Bedford
-	email = trevor@bedford.io
-	signingkey = 08FC12512E7B73D7
+	name = Cécile Tran Kiem
+	email = ctrankie@fredhutch.org
 [github]
-	user = trvrb
+	user = CecileTK
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [diff]
@@ -108,6 +107,7 @@ protocol = https
 	smudge = git hawser smudge %f
 	required = true
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
